@@ -238,6 +238,7 @@ namespace Links
         public static readonly string bootstrap_css_map = Url("bootstrap.css.map");
         public static readonly string bootstrap_min_css = Url("bootstrap.min.css");
         public static readonly string bootstrap_min_css_map = Url("bootstrap.min.css.map");
+        public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
     }
 
     
@@ -382,6 +383,7 @@ namespace Links
                 public static readonly string bootstrap_reboot_min_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap-reboot.min.css");
                 public static readonly string bootstrap_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap.css");
                 public static readonly string bootstrap_min_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap.min.css");
+                public static readonly string Site_css = T4MVCHelpers.ProcessAssetPath("~/Content/Site.css");
             }
         }
     }
